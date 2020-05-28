@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Cw12.Models.Doctor>
+
+<h1>Lekarze</h1>
+<table>
+    <thead>
+          <tr>
+              <th>@Html.DisplayNameFor(modelItem=> modelItem.FirstName)</th>
+              <th>Nazwisko</th>
+              <th>Email</th>
+          </tr> 
+    </thead>
+    <tbody>
+        @foreach (var d in Model) 
+        {
+            <tr>
+                <td>@d.FirstName</td>
+                <td>@d.LastName</td>
+                <td>@d.Email</td>
+            </tr>
+        }
+    </tbody>
+</table>
